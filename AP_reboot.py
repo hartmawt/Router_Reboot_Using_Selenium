@@ -40,6 +40,7 @@ def reboot():
 
 def finalize():
     server.sendmail("from-address", "to-address", " ".join(msg))
+    alert_obj = browser.switch_to.alert
     alert_obj.accept()
     browser.quit()
 
